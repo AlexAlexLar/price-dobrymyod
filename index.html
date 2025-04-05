@@ -11,27 +11,35 @@
     }
     .top-bar {
       background: #f8e6a0;
-      padding: 15px;
+      padding: 15px 10px;
       display: flex;
       justify-content: center;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 15px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 10;
     }
     .top-bar a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       text-decoration: none;
       background: #d8b448;
       color: #fff;
-      padding: 10px 20px;
+      padding: 10px 16px;
       border-radius: 10px;
       font-weight: bold;
       transition: 0.3s;
+      font-size: 15px;
     }
     .top-bar a:hover {
       background: #b9942f;
+    }
+    .top-bar img {
+      width: 20px;
+      height: 20px;
     }
     iframe {
       border: none;
@@ -43,8 +51,18 @@
 <body>
 
   <div class="top-bar">
-    <a href="price.pdf" download>📥 Скачать прайс (PDF)</a>
-    <a href="tel:+79210935990">📞 Позвонить</a>
+    <a href="tel:+79210935990">
+      📞 Позвонить
+    </a>
+    <a href="https://t.me/dobryjpchelovod" target="_blank">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABKUlEQVR4Ae3VsQ3CMBSA4Q/owQ9gD3YD3QfeAfdAvWB3QHdAvgEdmFyLrVZ0WxrfkzRxSBykAecNk0NkgpZzSlpJc9cF1iVnSeRa15O0xAxWNLzBJwEoFlzJzggMALCeAnvHg1FkbqwrCc5gD5AGh4QAt9LZ9oBheG3ChF1wm58t18VC+UOUCPeRPeQtQyP+P2hENZ8zG6idX4sZNYG6cwCn3Z95wbD7vL+2gz8WQDHdpykAecNd+DuEfdAW8X6eN2KgAAAABJRU5ErkJggg==" alt="Telegram"> Telegram
+    </a>
+    <a href="https://wa.me/79210935990" target="_blank">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB8UlEQVRYR+2WTUsDQRCGP7sIpAiFwY1ZkGhA7kAmwEZo9QKxAZCBn8AgdAaMQGyEd0EjsB3UmwRQy4e3m3zly3Oz0XZJ1Ylmd4/z7vT2Z36RGEYjjrCEtLrUM4KsgxkekAkqYO5PQyDTAQgMPjKOtzB1yk2Dd6IF1OdAI3aFktodThJLtyIr3c+8ObMM8F8UDTbAlxhQlgzjhNMJkMknAFe3fUSeMFlCGvEJfgw4OdC4z2q7gUokmOsEUYGkCzSiF3AlC1wxmT2xCiw9bcCVmvoEJMRzFkD7LZ3ZydWz3AJ3VrK0PvEvV84drFgqJZhnQy4gb8mg4M8iHdRBGFZHpL/xz9qlvBdCOOY+Ub45Ob6A3hbyiWy3UPvBIhxMYBYLFGUKHTMQlyDA6+Iff9sCFKk7h2GnPqXsTPqANXPmNLnSMuEZoN4GsEO3/CbN3RLH7oEvFURhbcLGPkX4J1fZQhO8QLjHobrfyCt2A+cfZKwJow09RUgx3qRWWJCRHjEOhJv9wtzlv+0EwU//Zz6ZBFOuGwAAAABJRU5ErkJggg==" alt="WhatsApp"> WhatsApp
+    </a>
+    <a href="price.pdf" download>
+      📥 Скачать прайс (PDF)
+    </a>
   </div>
 
   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4S3qq_O0KEYbaOqUYMCfiQxgWsjxIIquSLJClXA5sGLVa3Mwe8zq3bnCAZnOPq4qq9nkrWChNpY2H/pubhtml?gid=2063201946&single=true&widget=true&headers=false"></iframe>
