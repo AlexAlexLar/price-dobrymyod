@@ -2,25 +2,33 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Прайс — Добрый мёд</title>
   <style>
     body {
       margin: 0;
+      padding: 0;
       background: #fffdf6;
       font-family: sans-serif;
       font-size: 18px;
+      overflow-x: hidden;
+    }
+    .top-bar-wrapper {
+      width: 100%;
+      overflow-x: auto;
     }
     .top-bar {
       background: #f8e6a0;
       padding: 20px 10px;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 10;
+      min-width: max-content;
     }
     .top-bar a {
       display: flex;
@@ -36,6 +44,7 @@
       font-size: 18px;
       min-width: 200px;
       height: 80px;
+      white-space: nowrap;
     }
     .top-bar a:hover {
       background: #b9942f;
@@ -47,26 +56,28 @@
     }
     iframe {
       border: none;
-      width: 100%;
+      width: 100vw;
       height: 90vh;
     }
   </style>
 </head>
 <body>
 
-  <div class="top-bar">
-    <a href="tel:+79210935990">
-      <img src="A_3D-style_'Call'_button_icon_with_a_glossy_finish.png" alt="Позвонить"> Позвонить
-    </a>
-    <a href="https://t.me/dobryjpchelovod" target="_blank">
-      <img src="A_3D-style_Telegram_logo_icon_with_a_glossy,_moder.png" alt="Telegram"> Telegram
-    </a>
-    <a href="https://wa.me/79210935990" target="_blank">
-      <img src="A_3D-style_WhatsApp_logo_icon_with_a_realistic_glo.png" alt="WhatsApp"> WhatsApp
-    </a>
-    <a href="price.pdf" download>
-      <img src="A_3D-style_'Download'_button_icon_with_a_glossy,_m.png" alt="Скачать прайс"> Скачать прайс
-    </a>
+  <div class="top-bar-wrapper">
+    <div class="top-bar">
+      <a href="tel:+79210935990">
+        <img src="A_3D-style_'Call'_button_icon_with_a_glossy_finish.png" alt="Позвонить"> Позвонить
+      </a>
+      <a href="https://t.me/dobryjpchelovod" target="_blank">
+        <img src="A_3D-style_Telegram_logo_icon_with_a_glossy,_moder.png" alt="Telegram"> Telegram
+      </a>
+      <a href="https://wa.me/79210935990" target="_blank">
+        <img src="A_3D-style_WhatsApp_logo_icon_with_a_realistic_glo.png" alt="WhatsApp"> WhatsApp
+      </a>
+      <a href="price.pdf" download>
+        <img src="A_3D-style_'Download'_button_icon_with_a_glossy,_m.png" alt="Скачать прайс"> Скачать прайс
+      </a>
+    </div>
   </div>
 
   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4S3qq_O0KEYbaOqUYMCfiQxgWsjxIIquSLJClXA5sGLVa3Mwe8zq3bnCAZnOPq4qq9nkrWChNpY2H/pubhtml?gid=2063201946&single=true&widget=true&headers=false"></iframe>
