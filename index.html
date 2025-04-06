@@ -18,8 +18,8 @@
       background: #f8e6a0;
       padding: 10px;
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: fixed;
@@ -27,6 +27,14 @@
       left: 0;
       width: 100%;
       z-index: 10;
+    }
+    .menu-column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1 1 45%;
+      min-width: 180px;
+      align-items: center;
     }
     .top-bar a {
       display: flex;
@@ -42,7 +50,6 @@
       transition: 0.3s;
       font-size: 14px;
       white-space: nowrap;
-      flex: 1 1 auto;
       min-width: 160px;
       max-width: 220px;
     }
@@ -56,20 +63,30 @@
     }
     .content {
       position: absolute;
-      top: 80px;
+      top: 100px;
       bottom: 0;
       left: 0;
       right: 0;
+      overflow: auto;
+    }
+    .responsive-frame {
+      width: 100%;
+      height: 100%;
+      overflow-x: auto;
     }
     iframe {
       border: none;
-      width: 100%;
+      min-width: 100%;
       height: 100%;
     }
-    @media (max-width: 600px) {
+    @media (min-width: 601px) {
       .top-bar {
-        flex-direction: column;
-        align-items: stretch;
+        flex-wrap: nowrap;
+        flex-direction: row;
+      }
+      .menu-column {
+        flex-direction: row;
+        justify-content: center;
       }
     }
   </style>
@@ -77,22 +94,28 @@
 <body>
 
   <div class="top-bar">
-    <a href="tel:+79210935990">
-      <img src="A_3D-style_'Call'_button_icon_with_a_glossy_finish.png" alt="Позвонить"> Позвонить
-    </a>
-    <a href="https://t.me/dobryjpchelovod" target="_blank">
-      <img src="A_3D-style_Telegram_logo_icon_with_a_glossy,_moder.png" alt="Telegram"> Telegram
-    </a>
-    <a href="https://wa.me/79210935990" target="_blank">
-      <img src="A_3D-style_WhatsApp_logo_icon_with_a_realistic_glo.png" alt="WhatsApp"> WhatsApp
-    </a>
-    <a href="price.pdf" download>
-      <img src="A_3D-style_'Download'_button_icon_with_a_glossy,_m.png" alt="Скачать прайс"> Прайс
-    </a>
+    <div class="menu-column">
+      <a href="tel:+79210935990">
+        <img src="A_3D-style_'Call'_button_icon_with_a_glossy_finish.png" alt="Позвонить"> Позвонить
+      </a>
+      <a href="price.pdf" download>
+        <img src="A_3D-style_'Download'_button_icon_with_a_glossy,_m.png" alt="Скачать прайс"> Прайс
+      </a>
+    </div>
+    <div class="menu-column">
+      <a href="https://t.me/dobryjpchelovod" target="_blank">
+        <img src="A_3D-style_Telegram_logo_icon_with_a_glossy,_moder.png" alt="Telegram"> Telegram
+      </a>
+      <a href="https://wa.me/79210935990" target="_blank">
+        <img src="A_3D-style_WhatsApp_logo_icon_with_a_realistic_glo.png" alt="WhatsApp"> WhatsApp
+      </a>
+    </div>
   </div>
 
   <div class="content">
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4S3qq_O0KEYbaOqUYMCfiQxgWsjxIIquSLJClXA5sGLVa3Mwe8zq3bnCAZnOPq4qq9nkrWChNpY2H/pubhtml?gid=2063201946&single=true&widget=true&headers=false"></iframe>
+    <div class="responsive-frame">
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4S3qq_O0KEYbaOqUYMCfiQxgWsjxIIquSLJClXA5sGLVa3Mwe8zq3bnCAZnOPq4qq9nkrWChNpY2H/pubhtml?gid=2063201946&single=true&widget=true&headers=false"></iframe>
+    </div>
   </div>
 
 </body>
