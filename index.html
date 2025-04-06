@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>Прайс — Добрый мёд</title>
   <style>
     html, body {
@@ -68,18 +68,19 @@
       left: 0;
       right: 0;
       overflow: auto;
+      -webkit-overflow-scrolling: touch;
     }
     .responsive-frame {
       width: 100%;
       height: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+      overflow: auto;
     }
     iframe {
       border: none;
-      width: 100%;
+      width: 100vw;
       height: 100%;
-      min-width: 768px;
+      min-width: 100vw;
+      touch-action: manipulation;
     }
     @media (min-width: 601px) {
       .top-bar {
@@ -116,7 +117,10 @@
 
   <div class="content">
     <div class="responsive-frame">
-      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4S3qq_O0KEYbaOqUYMCfiQxgWsjxIIquSLJClXA5sGLVa3Mwe8zq3bnCAZnOPq4qq9nkrWChNpY2H/pubhtml?gid=2063201946&single=true&widget=true&headers=false"></iframe>
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4S3qq_O0KEYbaOqUYMCfiQxgWsjxIIquSLJClXA5sGLVa3Mwe8zq3bnCAZnOPq4qq9nkrWChNpY2H/pubhtml?gid=2063201946&single=true&widget=true&headers=false"
+        allowfullscreen
+      ></iframe>
     </div>
   </div>
 
