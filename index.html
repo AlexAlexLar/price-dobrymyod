@@ -5,34 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Прайс — Добрый мёд</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       background: #fffdf6;
       font-family: sans-serif;
       font-size: 18px;
-      overflow-x: hidden;
-    }
-    .top-bar-wrapper {
-      width: 100%;
-      overflow-x: auto;
+      height: 100%;
+      overflow: hidden;
     }
     .top-bar {
       background: #f8e6a0;
       padding: 20px 10px;
       display: flex;
-      justify-content: center;
-      flex-wrap: nowrap;
-      gap: 20px;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 12px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: 0;
+      width: 100%;
       z-index: 10;
-      min-width: max-content;
     }
     .top-bar a {
+      flex: 1 1 calc(50% - 24px);
+      max-width: 240px;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 12px;
       text-decoration: none;
       background: #d8b448;
@@ -42,7 +43,7 @@
       font-weight: bold;
       transition: 0.3s;
       font-size: 18px;
-      min-width: 200px;
+      min-width: 180px;
       height: 80px;
       white-space: nowrap;
     }
@@ -50,37 +51,44 @@
       background: #b9942f;
     }
     .top-bar img {
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
       object-fit: contain;
+    }
+    .content {
+      position: absolute;
+      top: 120px;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
     iframe {
       border: none;
-      width: 100vw;
-      height: 90vh;
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
 <body>
 
-  <div class="top-bar-wrapper">
-    <div class="top-bar">
-      <a href="tel:+79210935990">
-        <img src="A_3D-style_'Call'_button_icon_with_a_glossy_finish.png" alt="Позвонить"> Позвонить
-      </a>
-      <a href="https://t.me/dobryjpchelovod" target="_blank">
-        <img src="A_3D-style_Telegram_logo_icon_with_a_glossy,_moder.png" alt="Telegram"> Telegram
-      </a>
-      <a href="https://wa.me/79210935990" target="_blank">
-        <img src="A_3D-style_WhatsApp_logo_icon_with_a_realistic_glo.png" alt="WhatsApp"> WhatsApp
-      </a>
-      <a href="price.pdf" download>
-        <img src="A_3D-style_'Download'_button_icon_with_a_glossy,_m.png" alt="Скачать прайс"> Скачать прайс
-      </a>
-    </div>
+  <div class="top-bar">
+    <a href="tel:+79210935990">
+      <img src="A_3D-style_'Call'_button_icon_with_a_glossy_finish.png" alt="Позвонить"> Позвонить
+    </a>
+    <a href="https://t.me/dobryjpchelovod" target="_blank">
+      <img src="A_3D-style_Telegram_logo_icon_with_a_glossy,_moder.png" alt="Telegram"> Telegram
+    </a>
+    <a href="https://wa.me/79210935990" target="_blank">
+      <img src="A_3D-style_WhatsApp_logo_icon_with_a_realistic_glo.png" alt="WhatsApp"> WhatsApp
+    </a>
+    <a href="price.pdf" download>
+      <img src="A_3D-style_'Download'_button_icon_with_a_glossy,_m.png" alt="Скачать прайс"> Скачать прайс
+    </a>
   </div>
 
-  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4S3qq_O0KEYbaOqUYMCfiQxgWsjxIIquSLJClXA5sGLVa3Mwe8zq3bnCAZnOPq4qq9nkrWChNpY2H/pubhtml?gid=2063201946&single=true&widget=true&headers=false"></iframe>
+  <div class="content">
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4S3qq_O0KEYbaOqUYMCfiQxgWsjxIIquSLJClXA5sGLVa3Mwe8zq3bnCAZnOPq4qq9nkrWChNpY2H/pubhtml?gid=2063201946&single=true&widget=true&headers=false"></iframe>
+  </div>
 
 </body>
 </html>
